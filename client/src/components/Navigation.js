@@ -5,10 +5,13 @@ function Navigation() {
   return (
     <nav className="Navigation">
       <div className="Navigation__item">
-        <NavLink to="/courses">Courses</NavLink>
+        <NavLink to="/about">About us</NavLink>
       </div>
       <div className="Navigation__item">
-        <NavLink to="/students">Students</NavLink>
+        <NavLink to="/estate">Real Estate</NavLink>
+      </div>
+      <div className="Navigation__item">
+        <NavLink to="/contact">Contact</NavLink>
       </div>
     </nav>
   );

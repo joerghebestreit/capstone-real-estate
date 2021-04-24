@@ -1,42 +1,39 @@
 import "./App.css";
 import { Switch, Route, Redirect, useLocation } from "react-router-dom";
 import Navigation from "./components/Navigation";
-import StudentsPage from "./components/StudentsPage";
-import CoursesPage from "./components/CoursesPage";
+import ContactPage from "./components/ContactPage";
+import AboutPage from "./components/AboutPage";
+import EstatePage from "./components/EstatePage";
+import Footer from "./components/Footer"
+import HomePage from "./components/Home"
 
 function App() {
   const location = useLocation();
 
-  function renderHeaderText() {
-    let headerText;
-    if (location.pathname.includes("courses")) {
-      headerText = "Courses";
-    } else if (location.pathname.includes("students")) {
-      headerText = "Students";
-    }
-
-    return headerText;
-  }
   return (
     <div className="App">
       <header className="App__header">
-        <h1>{renderHeaderText()}</h1>
+        <p className="headline">HEBESTREIT<br></br>IMMOBILIEN</p>
+        <Navigation />
       </header>
       <main className="App__content">
         <Switch>
-          <Route path="/students">
-            <StudentsPage />
+          <Route path="/about">
+            <AboutPage />
           </Route>
-          <Route path="/courses">
-            <CoursesPage />
+          <Route path="/estate">
+            <EstatePage />
+          </Route>
+          <Route path="/contact">
+            <ContactPage />
           </Route>
           <Route path="/">
-            <Redirect to="/courses" />
+            <HomePage to="/home" />
           </Route>
         </Switch>
       </main>
-      <footer className="App__nav-footer">
-        <Navigation />
+      <footer>
+        <Footer/>
       </footer>
     </div>
   );

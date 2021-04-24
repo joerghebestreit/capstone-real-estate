@@ -1,0 +1,32 @@
+.footer {
+  height: 90px;
+  display: flex;
+  background-color: #94d3f0;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  border-top: 1px solid #707070;
+}
+
+.svgPhone {
+  width: 25px;
+  margin-right: 8px;
+}
+
+.fbIcon {
+  margin: 15px 15px 15px 30px;
+}
+
+.instaIcon {
+  margin: 15px;
+}
+
+.phoneNumberFooter {
+  color: #707070;
+}
+
+.phoneIconNumber {
+  display: flex;
+  margin-right: 15px;
+  align-items: center;
+}

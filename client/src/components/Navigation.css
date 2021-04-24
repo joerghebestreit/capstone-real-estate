@@ -7,10 +7,11 @@
 
 .Navigation__item a {
   text-decoration: none;
-  color: black;
+  color: #707070;
+  margin-left: 5px;
 }
 
 .Navigation__item a.active {
-  color: darkblue;
+  color: black;
   font-weight: bold;
 }
