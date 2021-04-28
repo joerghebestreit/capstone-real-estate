@@ -1,10 +1,19 @@
-function EstatePage() {
-    return (
-      <div>
-        <h4>Real Estate</h4>
+import "./EstatePage.css"
+
+export default function EstatePage() {
+  return (
+    <div className="estateDiv">
+        <RentBuy />
       </div>
     );
-  }
+}
   
-  export default EstatePage;
-  
+function RentBuy() {
+  return (
+    <div className="rentBuy">
+      <p>Buy</p>
+      <hr></hr>
+      <p>Rent</p>
+    </div>
+  )
+}

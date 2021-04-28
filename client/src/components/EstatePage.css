@@ -1,0 +1,10 @@
+.estateDiv {
+  background-color: white;
+}
+
+.rentBuy {
+  display: flex;
+  justify-content: space-between;
+  color: #707070;
+  margin: 25px 20%;
+}

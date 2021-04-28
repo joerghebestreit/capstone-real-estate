@@ -6,6 +6,7 @@ import AboutPage from "./components/AboutPage";
 import EstatePage from "./components/EstatePage";
 import Footer from "./components/Footer"
 import HomePage from "./components/Home"
+import { NavLink } from "react-router-dom";
 
 function App() {
   const location = useLocation();
@@ -13,7 +14,7 @@ function App() {
   return (
     <div className="App">
       <header className="App__header">
-        <p className="headline">HEBESTREIT<br></br>IMMOBILIEN</p>
+      <NavLink className="headline"to="/"><p className="headline">HEBESTREIT<br></br>IMMOBILIEN</p></NavLink>
         <Navigation />
       </header>
       <main className="App__content">

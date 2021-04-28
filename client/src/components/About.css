@@ -6,7 +6,16 @@
   background-color: #94d3f0;
   opacity: 80%;
   padding: 15px;
-  margin-top: 37%;
-  height: 0;
-  padding-bottom: 100%;
+  animation: fadeIn 1000ms;
+  height: 67%;
+  align-self: flex-end;
+}
+
+@keyframes fadeIn {
+  0% {
+    transform: translateY(300px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }

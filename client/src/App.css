@@ -1,19 +1,26 @@
 .App {
   display: grid;
   height: 100vh;
-  grid-template-rows: [header] auto [content] 1fr [footer] 90px;
+  grid-template-rows: [header] auto [content] 1fr [footer] 70px;
   font-family: sans-serif;
 }
 
 .App__header {
+  height: 70px;
   display: flex;
   background-color: #94d3f0;
   justify-content: space-between;
-  border-bottom: 1px solid #707070;
-  box-shadow: 5px 5px 15px 5px black;
+  box-shadow: 0px 0px 8px 1px rgb(163, 163, 163);
+  position: relative;
 }
 
+/* .App__header::after {
+  box-shadow: 5px 5px 15px 5px black;
+} */
+
 .App__content {
+  height: 100%;
+  display: grid;
   overflow-y: scroll;
   /* padding: 1rem; */
   background-image: url("./components/images/backgroundHouse.jpeg");
@@ -29,6 +36,8 @@
   align-items: center;
   text-align: center;
   margin-left: 15px;
+  color: #707070;
+  text-decoration: none;
 }
 
 .svgMail {

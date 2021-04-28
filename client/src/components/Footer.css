@@ -1,11 +1,12 @@
 .footer {
-  height: 90px;
+  height: 70px;
   display: flex;
   background-color: #94d3f0;
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  border-top: 1px solid #707070;
+  box-shadow: 0px 0px 5px 0px rgb(85, 85, 85);
+  position: relative;
 }
 
 .svgPhone {
@@ -29,4 +30,15 @@
   display: flex;
   margin-right: 15px;
   align-items: center;
+  text-decoration: none;
+  color: black;
+}
+
+.a {
+  text-decoration: none;
+  color: black;
+}
+
+.phoneIconNumberA {
+  text-decoration: none;
 }
