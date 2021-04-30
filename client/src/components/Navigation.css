@@ -17,6 +17,7 @@
 }
 
 .menuIcon {
+  cursor: pointer;
   height: 36px;
   margin: 15px;
 }

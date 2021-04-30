@@ -2,9 +2,144 @@
   background-color: white;
 }
 
-.rentBuy {
+.rentBuyDiv {
   display: flex;
   justify-content: space-between;
-  color: #707070;
   margin: 25px 20%;
+}
+
+.rent {
+  cursor: pointer;
+  color: #707070;
+}
+
+.rentClicked {
+  cursor: pointer;
+  color: #94d3f0;
+}
+
+.buy {
+  cursor: pointer;
+  color: #707070;
+}
+
+.buyClicked {
+  cursor: pointer;
+  color: #94d3f0;
+}
+
+.filterDivTotal {
+  color: #707070;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #707070;
+  border-radius: 20px;
+  margin: 15px;
+}
+
+.filterDivTotalActiv {
+  color: #707070;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #707070;
+  border-radius: 20px;
+  margin: 15px;
+}
+
+.svgChevron {
+  margin: 5px;
+  animation: rotateIn 120ms linear;
+  animation-fill-mode: forwards;
+}
+
+.svgChevronTurned {
+  margin: 5px;
+  animation: rotateOut 120ms linear;
+}
+
+@keyframes rotateIn {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
+
+@keyframes rotateOut {
+  0% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.inputDiv {
+  display: flex;
+}
+
+.section1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+}
+
+.section2 {
+  margin-top: 10px;
+  margin: 0 auto;
+  animation: fadeIn 280ms ease-in-out;
+}
+
+.section2Aktiv {
+  margin-top: 10px;
+  margin: 0 auto;
+  opacity: 1;
+  animation: fadeOut 280ms ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.input {
+  width: 140px;
+  padding-left: 10px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  border-radius: 15px;
+  border: 1px solid #707070;
+  margin: 5px;
+}
+
+.input2 {
+  width: 140px;
+  padding-left: 10px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  border-radius: 15px;
+  border: 1px solid #707070;
+  margin: 5px;
+  margin-bottom: 15px;
+}
+
+.p2 {
+  margin-left: 15px;
+  margin-top: 12px;
+  font-size: smaller;
 }
