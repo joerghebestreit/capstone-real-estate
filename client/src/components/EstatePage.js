@@ -2,8 +2,6 @@ import "./EstatePage.css"
 import { useState } from "react";
 
 
-
-
 export default function EstatePage() {
   return (
     <div className="estateDiv">
@@ -89,3 +87,14 @@ function Filter() {
       }
   }
 
+// API Data------------------------------------------------------------------------
+
+// function AllPropertys() {
+//   return(
+//     apartments
+//   );
+// }
+
+// function PropertyCard() {
+
+// }
