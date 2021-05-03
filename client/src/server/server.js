@@ -18,7 +18,7 @@ app.get("/estateSchema", (req,res)=>{
     apartments.find().then((apartments)=>{
       res.json(apartments);
       res.status(200);
-      console.log(apartments);
+      console.log('Hello ' + apartments);
     });
   });
   
