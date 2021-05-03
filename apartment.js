@@ -1,6 +1,6 @@
 const Mongoose = require("mongoose");
 const { Schema } = Mongoose;
-const estateSchema = new Schema(
+const ApartmentSchema = new Schema(
   {
     city: String,
     street: String,
@@ -11,12 +11,13 @@ const estateSchema = new Schema(
     status: String,
     discription: String,
     id: Number,
-    img: Array
+    img: Array,
   },
   {
     timestamps: true,
+    collection: "apartments",
     versionKey: false,
   }
 );
 
-module.exports = Mongoose.model("apartments", estateSchema);
+module.exports = Mongoose.model("Apartment", ApartmentSchema);
