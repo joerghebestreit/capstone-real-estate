@@ -1,6 +1,8 @@
 import "./EstatePage.css"
 import { useState } from "react";
-import {Component} from 'react'
+
+
+
 
 export default function EstatePage() {
   return (
@@ -86,3 +88,4 @@ function Filter() {
       )
       }
   }
+
