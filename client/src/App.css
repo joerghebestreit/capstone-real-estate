@@ -14,10 +14,6 @@
   position: relative;
 }
 
-/* .App__header::after {
-  box-shadow: 5px 5px 15px 5px black;
-} */
-
 .App__content {
   height: 100%;
   display: grid;
@@ -43,4 +39,5 @@
 .svgMail {
   width: 25px;
   margin-right: 8px;
+  color: black;
 }

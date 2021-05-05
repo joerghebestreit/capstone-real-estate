@@ -12,6 +12,13 @@
 .svgPhone {
   width: 25px;
   margin-right: 8px;
+  color: Black;
+}
+
+.svgPhone2 {
+  width: 25px;
+  margin-right: 8px;
+  color: White;
 }
 
 .fbIcon {
@@ -23,7 +30,7 @@
 }
 
 .phoneNumberFooter {
-  color: #707070;
+  color: white;
 }
 
 .phoneIconNumber {

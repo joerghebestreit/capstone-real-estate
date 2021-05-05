@@ -9,6 +9,7 @@
   animation: showPage 1000ms;
   height: 67%;
   align-self: flex-end;
+  color: black;
 }
 
 @keyframes showPage {
@@ -18,4 +19,12 @@
   100% {
     transform: translateY(0px);
   }
+}
+
+.phoneNumber {
+  color: black;
+}
+
+.mailAdress {
+  color: Black;
 }

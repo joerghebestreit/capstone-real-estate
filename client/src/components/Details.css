@@ -1,0 +1,82 @@
+.detailDiv {
+  background-color: white;
+  color: #707070;
+  font-weight: 100;
+}
+
+
+/* Botton-------------------------------------------------------------------- */
+.btn {
+  background-position: center;
+  transition: background 0.8s;
+  margin-left: 15px;
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+.btn:hover {
+  background: #47a7f5 radial-gradient(circle, transparent 1%, #47a7f5 1%)
+    center/15000%;
+}
+
+.btn:active {
+  background-color: #6eb9f7;
+  background-size: 100%;
+  transition: background 0s;
+}
+
+button {
+  border: none;
+  border-radius: 2px;
+  padding: 12px 18px;
+  font-size: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: white;
+  background-color: #2196f3;
+  box-shadow: 0 0 4px #999;
+  outline: none;
+}
+
+/* flex---------------------------------------------------------------- */
+
+.p-1 {
+  display: flex;
+  flex-direction: row;
+  margin: 15px;
+  justify-content: space-between;
+}
+
+.description{
+  text-align: Justify;
+  margin: 15px;
+}
+
+
+.p-m1{
+  Margin-top: 25px;
+  Margin-Bottom: 25px;
+  Margin-left: 15px;
+  Margin-right: 25px;
+}
+
+.p-m2{
+  Margin-top: 25px;
+  Margin-Bottom: 25px;
+  Margin-left: 70px;
+  Margin-right: 25px;
+}
+
+.hr {
+  margin-left: 15px;
+  margin-right: 15px;
+  color: #707070;
+}
+
+.p-2-1{
+  margin-left: 15px !important;
+}
+
+.p-1-2{
+  text-align:right;
+}

@@ -2,15 +2,15 @@ const Mongoose = require("mongoose");
 const { Schema } = Mongoose;
 const ApartmentSchema = new Schema(
   {
-    city: String,
-    street: String,
-    price: String,
-    yearBuild: String,
-    interior: String,
-    bedrooms: String,
-    status: String,
-    discription: String,
-    id: Number,
+    City: String,
+    Street: String,
+    Price: String,
+    YearBuild: String,
+    Interior: String,
+    Bedrooms: String,
+    Status: String,
+    Discription: String,
+    ID: String,
     img: Array,
   },
   {

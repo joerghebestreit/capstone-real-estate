@@ -17,7 +17,13 @@ app.get("/properties", (req, res) => {
   Apartments.find().then((apartments) => {
     res.json(apartments);
     res.status(200);
-    console.log("Hello " + apartments);
+  });
+});
+
+app.get(`/properties/:id`, (req, res) => {
+  Apartments.find({ ID: req.params.id}).then((apartments) => {
+    res.json(apartments);
+    res.status(200);
   });
 });
 
