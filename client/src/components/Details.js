@@ -3,6 +3,10 @@ import { useState, useEffect } from "react";
 import { useParams, useHistory } from "react-router-dom";
 
 
+function Carousel() {
+  
+}
+
 export default function Details() {
   const { ID } = useParams();
   const history = useHistory();
@@ -26,23 +30,31 @@ export default function Details() {
     <div className="detailDiv">
       <div className="p-1">
         <div className="p-1-1">
-          <p className="p">{property.City}</p>
-          <p className="p">{property.Street}</p>
+          <p className="p-a">{property.City}</p>
+          <p className="p-a">{property.Street}</p>
         </div>
         <div className="p-1-2">
-          <p className="p">{property.Price}</p>
-          <p className="p">{property.ID}</p>
+          <p className="p-a">{property.Price}</p>
+          <p className="p-a">ID: {property.ID}</p>
         </div>
       </div>
-      <hr></hr>
-      <div className="p-2">
-        <p className="p">{property.YearBuild}</p>
-        <p className="p">{property.Interior}</p>
-        <p className="p">{property.Bedrooms}</p>
-        <p className="p">{property.Status}</p>
+      <hr className="hr"></hr>
+      <div className="p-1">
+        <div className="p-2-1">
+          <p className="p-m1">Year Build</p>
+          <p className="p-m1">Interior</p>
+          <p className="p-m1">Bedrooms</p>
+          <p className="p-m1">Status</p>
+        </div>
+        <div className="p-2-2">
+          <p className="p-m2">{property.YearBuild}</p>
+          <p className="p-m2">{property.Interior}</p>
+          <p className="p-m2">{property.Bedrooms}</p>
+          <p className="p-m2">{property.Status}</p>
+        </div>
       </div>
-      <hr></hr>
-      <p className="p">{property.Discription}</p>
+      <hr className="hr"></hr>
+      <p className="description">{property.Discription}</p>
       <button className="btn" onClick={() => history.goBack()}>
         Back
       </button>
