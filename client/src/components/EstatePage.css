@@ -173,4 +173,14 @@
   justify-content: space-between;
   justify-items: flex-start;
   margin: 10px;
+  position: relative;
+}
+
+.hr-h{
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto; 
+  left: 0;
+  right: 0;
+  text-align: center;
 }
