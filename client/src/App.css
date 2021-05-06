@@ -8,7 +8,7 @@
 .App__header {
   height: 70px;
   display: flex;
-  background-color: #94d3f0;
+  background-color: #33ADE5;
   justify-content: space-between;
   box-shadow: 0px 0px 8px 1px rgb(163, 163, 163);
   position: relative;
@@ -28,11 +28,10 @@
 
 .headline {
   display: flex;
-  color: #707070;
+  color: white;
   align-items: center;
   text-align: center;
   margin-left: 15px;
-  color: #707070;
   text-decoration: none;
 }
 

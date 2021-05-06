@@ -25,7 +25,7 @@ export default function Navigation() {
         className="menuIcon"
         fill="none"
         viewBox="0 0 24 24"
-        stroke="currentColor"
+        stroke="white"
       >
         <path
           strokeLinecap="round"
