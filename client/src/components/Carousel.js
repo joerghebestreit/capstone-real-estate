@@ -7,14 +7,12 @@ export default function Carousel({images}) {
     const length = images.length
 
     const nextSlide = () => {
-        setPicture(picture === length - 1 ? 0 : picture + 1)
+        setPicture((picture +1) % images.length )
     }
 
     const prevSlide = () => {
         setPicture(picture === 0 ? length -1 : picture - 1)
     }
-
-    console.log(picture)
 
     if(!Array.isArray(images) || images.length <= 0) {
         return null
