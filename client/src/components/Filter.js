@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Filter() {
+export default function Filter({setSearch, search}) {
   const [active, setActive] = useState("false");
 
   const handleTurn = () => {
@@ -31,25 +31,24 @@ export default function Filter() {
         </svg>
         <p>Filter</p>
       </div>
-      {!active && <Filter2 />}
-    </div>
-  );
-  function Filter2() {
-    return (
-      <div className={active ? "section2Aktiv" : "section2"}>
+      {!active && (<div className={active ? "section2Aktiv" : "section2"}>
         <p className="p2">Price</p>
         <div className="inputDiv">
-          <input className="input" placeholder="from"></input>
-          <input className="input" placeholder="to"></input>
+          <input className="input" placeholder="from..."></input>
+          <input className="input" placeholder="to..."></input>
         </div>
         <p className="p2">City</p>
-        <input className="input"></input>
+        <input className="input" type="text" placeholder="City..." value={search} onChange={(event) => {setSearch(event.target.value)}}></input>
         <p className="p2">Square Feet</p>
         <div className="inputDiv">
-          <input className="input2" placeholder="from"></input>
-          <input className="input2" placeholder="to"></input>
+          <input className="input2" placeholder="from..."></input>
+          <input className="input2" placeholder="to..."></input>
         </div>
-      </div>
-    );
-  }
+      </div>)}
+    </div>
+  );
+
+      
+
+  
 }

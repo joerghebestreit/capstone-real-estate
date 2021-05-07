@@ -7,6 +7,7 @@ import RentBuy from "../components/RentBuy";
 export default function EstatePage() {
   const [properties, setProperties] = useState([]);
   const { id } = useParams();
+  const [search, setSearch] = useState("");
 
   useEffect(() => {
     const url = `http://localhost:4000/properties/`;
@@ -21,7 +22,14 @@ export default function EstatePage() {
   }, []);
 
   function renderProptery() {
-    return properties.map((property) => {
+    return properties.filter((property) => {
+      if(search === "") {
+        return property
+      } else if (property.City.toLowerCase().includes(search.toLowerCase())){
+        return property
+      }
+    
+    }).map((property) => {
       return (
         <Link className="linkBox" to={`/Details/${property.ID}`}>
           <div className="propertyCard">
@@ -31,8 +39,8 @@ export default function EstatePage() {
                 <p className="p">{property.City}</p>
                 <p className="p">{property.Street}</p>
               </div>
-              <hr className="hr-h"></hr>
-              <p className="p">{property.Price}</p>
+                <hr className="hr-h"></hr>
+              <p className="pp">{property.Price}</p>
             </div>
           </div>
         </Link>
@@ -43,8 +51,11 @@ export default function EstatePage() {
   return (
     <div className="estateDiv">
       <RentBuy />
-      <Filter />
+      <Filter setSearch={setSearch} search={search}/>
       <ul className="propteryList">{renderProptery()}</ul>
     </div>
   );
 }
+
+
+

@@ -176,17 +176,12 @@
   margin: 10px;
 }
 
-.hr-h{
-  flex-shrink: 0;
-}
-
-.p1{
+.pp{
   margin: 5px;
-  flex-grow: 1;
-
+  width: 50%;
+  text-align: right;
 }
 
 .shortData2{
-  flex-grow: 1;
-
+  width: 50%;
 }
