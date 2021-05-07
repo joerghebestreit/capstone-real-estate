@@ -165,22 +165,28 @@
 
 .img {
   width: 345px;
+  height: 230px;
+  object-fit: cover
 }
 
 .shortData {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  justify-items: flex-start;
+  justify-content: space-between; 
   margin: 10px;
-  position: relative;
 }
 
 .hr-h{
-  position: absolute;
-  margin-left: auto;
-  margin-right: auto; 
-  left: 0;
-  right: 0;
-  text-align: center;
+  flex-shrink: 0;
+}
+
+.p1{
+  margin: 5px;
+  flex-grow: 1;
+
+}
+
+.shortData2{
+  flex-grow: 1;
+
 }

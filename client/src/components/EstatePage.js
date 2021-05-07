@@ -31,7 +31,7 @@ export default function EstatePage() {
                 <p className="p">{property.City}</p>
                 <p className="p">{property.Street}</p>
               </div>
-              <hr></hr>
+              <hr className="hr-h"></hr>
               <p className="p">{property.Price}</p>
             </div>
           </div>

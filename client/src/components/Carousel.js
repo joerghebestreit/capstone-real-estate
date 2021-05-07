@@ -1,5 +1,5 @@
 import "../components/Carousel.css"
-import {FaArrowAltCircleRight, FaArrowAltCircleLeft} from "react-icons/fa";
+import { BiChevronRight, BiChevronLeft } from "react-icons/bi";
 import {useState} from "react";
 
 export default function Carousel({images}) {
@@ -20,8 +20,8 @@ export default function Carousel({images}) {
 
     return(
       <div className="carousel">
-          <FaArrowAltCircleLeft className="left-arrow" onClick={prevSlide}/>
-          <FaArrowAltCircleRight className="right-arrow" onClick={nextSlide}/>
+          <BiChevronLeft className="left-arrow" onClick={prevSlide}/>
+          <BiChevronRight className="right-arrow" onClick={nextSlide}/>
         {images.map((images, index) => {
           return(
             <div className={index === picture ? "slideActive" : "slide"} key={index}>

@@ -1,19 +1,22 @@
 import "./Footer.css";
+import {AiFillFacebook} from "react-icons/ai"
+import {GrInstagram} from "react-icons/gr"
+import {FaInstagram, FaPhoneAlt} from "react-icons/fa"
 
 function Footer() {
   return (
     <div className="footer">
       <div>
         <a href="https://www.facebook.com/" class="external" target="_blank">
-          <object src="./components/svg/facebookIcon.svg"></object>
+          <AiFillFacebook className="fbIcon"/>
         </a>
         <a target="_blank" href="https://www.instagram.com/">
-          <object src="./svg/instaIcon.svg"></object>
+          <FaInstagram className="instaIcon"/>
         </a>
       </div>
       <a href="tel:+900300400" className="phoneIconNumberA">
         <div className="phoneIconNumber">
-          <object src="./svg/phoneIcon.svg"></object>
+          <FaPhoneAlt className="svgPhone2"/>
           <p className="phoneNumberFooter">030 / 5 44 00 57</p>
         </div>
       </a>

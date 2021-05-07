@@ -22,11 +22,17 @@
 }
 
 .fbIcon {
-  margin: 15px 15px 15px 30px;
+  margin: 15px 15px 15px 22px;
+  color: white;
+  width: 24px;
+  height: 24px;
 }
 
 .instaIcon {
-  margin: 15px;
+  margin: 15px 15px 15px 0px;
+  color: white;
+  width: 24px;
+  height: 24px;
 }
 
 .phoneNumberFooter {
