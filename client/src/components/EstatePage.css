@@ -127,6 +127,11 @@
   margin: 5px;
 }
 
+input:focus {
+  outline: none;
+  border: 1px solid #000000;
+}
+
 .input2 {
   width: 140px;
   padding-left: 10px;

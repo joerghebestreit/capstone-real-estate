@@ -47,8 +47,4 @@ export default function Filter({setSearch, search}) {
       </div>)}
     </div>
   );
-
-      
-
-  
 }

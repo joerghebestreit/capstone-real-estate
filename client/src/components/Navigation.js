@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import "./Navigation.css";
 import { useState } from "react";
 import Menu from "@material-ui/core/Menu";
@@ -44,21 +44,9 @@ export default function Navigation() {
         getContentAnchorEl={null}
         anchorOrigin={{ vertical: 55, horizontal: "right" }}
       >
-        <MenuItem onClick={handleClose}>
-          <NavLink className="NavLink1" to="/about">
-            About us
-          </NavLink>
-        </MenuItem>
-        <MenuItem onClick={handleClose}>
-          <NavLink className="NavLink1" to="/estate">
-            Properties
-          </NavLink>
-        </MenuItem>
-        <MenuItem onClick={handleClose}>
-          <NavLink className="NavLink1" to="/contact">
-            Contact
-          </NavLink>
-        </MenuItem>
+        <MenuItem onClick={handleClose} component={Link} className="NavLink1" to="/about">About us</MenuItem>
+        <MenuItem onClick={handleClose} component={Link} className="NavLink1" to="/estate">Properties</MenuItem>
+        <MenuItem onClick={handleClose} component={Link} className="NavLink1" to="/contact">Contact</MenuItem>
       </Menu>
     </div>
   );
