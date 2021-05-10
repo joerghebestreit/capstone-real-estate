@@ -2,13 +2,13 @@ import "../components/ContactPage.css";
 import {FaPhoneAlt} from "react-icons/fa"
 import {HiOutlineMail} from "react-icons/hi"
 import {GoogleMap, withScriptjs, withGoogleMap, Marker} from "react-google-maps"
+import Form from "./Form"
 
 function Map() {
   return ( 
     <GoogleMap defaultZoom={14} defaultCenter={{lat: 52.526846, lng: 13.338450}}>
       <Marker position={{lat: 52.526846, lng: 13.338450}}/>
     </GoogleMap>
-    
   )
 }
 
@@ -44,6 +44,7 @@ function ContactPage() {
           mapElement={<div style={{ height: `200px`, width: `345px` }}/>}
         />
       </div>
+      <Form/>
     </div>
   );
 }
