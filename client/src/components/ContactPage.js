@@ -1,11 +1,10 @@
 import "../components/ContactPage.css";
-import {useState} from "react"
 import {FaPhoneAlt} from "react-icons/fa"
 import {HiOutlineMail} from "react-icons/hi"
 import Form from "./Form"
 import Map from "./Map"
 
-function ContactPage() {
+function ContactPage(setViewport) {
   return (
     <div className="textContainerContactPage">
       <h4>Contact</h4>
@@ -29,7 +28,7 @@ function ContactPage() {
       </div>
       <hr className="hrMap"></hr>
       <div className="mapDiv">
-        <Map property={setViewport}/>
+        <Map setViewport={setViewport}/>
       </div>
       <hr className="hrForm"></hr>
       <Form/>

@@ -1,4 +1,7 @@
 import ReactMapGL, {Marker} from "react-map-gl"
+import {useState} from "react"
+import {FaMapMarkerAlt} from "react-icons/fa"
+import "./ContactPage.css"
 
 export default function Map() {
     const [viewport, setViewport] = useState({
@@ -9,18 +12,17 @@ export default function Map() {
       height: "55vw",
     });
     return ( 
-  
         <ReactMapGL
           {...viewport}
           mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
+          onViewportChange={setViewport}
           onViewportChange={(viewport) => {
             setViewport(viewport);
           }}
         >
           <Marker latitude={52.526846} longitude={13.338450} offsetLeft={-20} offsetTop={-10}>
-            <div>Hebestreit Immo</div>
+            <div className="pinText"><FaMapMarkerAlt className="pin"/>  Hebestreit Immo</div>
           </Marker>
         </ReactMapGL>
-  
     )
-  }
+}
