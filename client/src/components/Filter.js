@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Filter({setSearch, search}) {
+export default function Filter({setSearch, search, setSearch1, search1, setSearch2, search2, setSearch3, search3, setSearch4, search4}) {
   const [active, setActive] = useState("false");
 
   const handleTurn = () => {
@@ -34,15 +34,15 @@ export default function Filter({setSearch, search}) {
       {!active && (<div className={active ? "section2Aktiv" : "section2"}>
         <p className="p2">Price</p>
         <div className="inputDiv">
-          <input className="input" placeholder="from..."></input>
-          <input className="input" placeholder="to..."></input>
+          <input className="input" placeholder="from..."value={search1} onChange={(event) => {setSearch1(event.target.value)}}></input>
+          <input className="input" placeholder="to..."value={search2} onChange={(event) => {setSearch2(event.target.value)}}></input>
         </div>
         <p className="p2">City</p>
         <input className="input" type="text" placeholder="City..." value={search} onChange={(event) => {setSearch(event.target.value)}}></input>
         <p className="p2">Square Feet</p>
         <div className="inputDiv">
-          <input className="input2" placeholder="from..."></input>
-          <input className="input2" placeholder="to..."></input>
+          <input className="input2" placeholder="from..."value={search3} onChange={(event) => {setSearch3(event.target.value)}}></input>
+          <input className="input2" placeholder="to..."value={search4} onChange={(event) => {setSearch4(event.target.value)}}></input>
         </div>
       </div>)}
     </div>

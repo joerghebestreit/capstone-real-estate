@@ -29,7 +29,7 @@ export default function Details() {
               <p className="p-a">{property.Street}</p>
             </section>
             <section className="p-1-2">
-              <p className="p-a">{property.Price}</p>
+              <p className="p-a">{property.Price} €</p>
               <p className="p-a">ID: {property.ID}</p>
             </section>
           </div>
