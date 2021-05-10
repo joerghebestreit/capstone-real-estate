@@ -3,11 +3,9 @@
   }
   
   .textContainerContactPage {
-    background-color: #94d3f0;
-    opacity: 80%;
+    background: rgba(148, 211, 240, 0.8);
     padding: 15px;
     animation: showPage 1000ms;
-    height: 96%;
     align-self: flex-end;
     color: black;
   }
@@ -38,3 +36,15 @@
     height: 200px;
     margin-top: 25px;
   }
+
+.hrMap{
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: black;
+}
+
+.hrForm{
+    margin-top: 25px;
+    margin-bottom: 5px;
+    color: black;
+}

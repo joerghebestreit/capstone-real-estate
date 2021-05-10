@@ -36,6 +36,7 @@ function ContactPage() {
         <HiOutlineMail className="svgMail"/>
         <p className="mailAdress">info@hebestreit-immobilien.com</p>
       </div>
+      <hr className="hrMap"></hr>
       <div className="mapDiv">
         <WrappedMap
           googleMapURL={"https://maps.googleapis.com/maps/api/js?key=AIzaSyAP5KqI2BKvNTDtgTo5dbiS3F34_UvF61M&v=3.exp&libraries=geometry,drawing,places"}
@@ -44,6 +45,7 @@ function ContactPage() {
           mapElement={<div style={{ height: `200px`, width: `345px` }}/>}
         />
       </div>
+      <hr className="hrForm"></hr>
       <Form/>
     </div>
   );
