@@ -1,0 +1,40 @@
+.text {
+    text-align: justify;
+  }
+  
+  .textContainerContactPage {
+    background-color: #94d3f0;
+    opacity: 80%;
+    padding: 15px;
+    animation: showPage 1000ms;
+    height: 94.5%;
+    align-self: flex-end;
+    color: black;
+  }
+  
+  @keyframes showPage {
+    0% {
+      transform: translateY(300px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  
+  .phoneNumber {
+    color: black;
+  }
+  
+  .mailAdress {
+    color: Black;
+  }
+  
+  .svgMail{
+    font-size: 22px;
+  } 
+  
+  .mapDiv{
+    width: 345px;
+    height: 200px;
+    margin-top: 25px;
+  }
