@@ -44,18 +44,18 @@ export default function EstatePage() {
             }
           }
         }
-      // }}).filter((property) => {
-      //   if(search3 === "" && search4 === "" ) { return true }
-      //   else{
-      //   if (Number(search4) > 0) {
-      //     if (Number(property.Interior) > Number(search3) && Number(property.Interior) <= Number(search4)) {
-      //     return true}}
-      //     else{
-      //       if (Number(property.Interior) >= Number(search3)){
-      //         return true
-      //       }
-      //     }
-      //   }
+      }).filter((property) => {
+        if(search3 === "" && search4 === "" ) { return true }
+        else{
+        if (Number(search4) > 0) {
+          if (Number(property.Interior) > Number(search3) && Number(property.Interior) <= Number(search4)) {
+          return true}}
+          else{
+            if (Number(property.Interior) >= Number(search3)){
+              return true
+            }
+          }
+        }
     }).map((property) => {
       return (
         <Link className="linkBox" to={`/Details/${property.ID}`}>
@@ -83,7 +83,3 @@ export default function EstatePage() {
     </div>
   );
 }
-
-
-// if (Number(property.Interior) > Number(search3) && Number(property.Interior) < Number(search4)) {
-//   return true

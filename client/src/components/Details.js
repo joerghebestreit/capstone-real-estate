@@ -43,7 +43,7 @@ export default function Details() {
             </section>
             <section className="p-2-2">
               <p className="p-m2">{property.YearBuild}</p>
-              <p className="p-m2">{property.Interior}</p>
+              <p className="p-m2">{property.Interior} Sq. Ft.</p>
               <p className="p-m2">{property.Bedrooms}</p>
               <p className="p-m2">{property.Status}</p>
             </section>
