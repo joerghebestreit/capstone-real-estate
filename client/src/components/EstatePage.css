@@ -143,11 +143,11 @@ input:focus {
   margin-bottom: 15px;
 }
 
-.p2 {
+/* .p2 {
   margin-left: 15px;
   margin-top: 12px;
   font-size: smaller;
-}
+} */
 
 .propertyCard {
   width: 345px;
@@ -160,7 +160,7 @@ input:focus {
   padding-bottom: 1px;
 }
 
-.p {
+.adress {
   margin: 5px;
 }
 
@@ -181,7 +181,7 @@ input:focus {
   margin: 10px;
 }
 
-.pp{
+.price{
   margin: 5px;
   width: 50%;
   text-align: right;
