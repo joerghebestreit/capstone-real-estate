@@ -20,6 +20,6 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "mongoose": "^5.12.5",
-    "react-map-gl": "^6.1.13"
+    "react-map-gl": "^6.1.14"
   }
 }
