@@ -1,15 +1,19 @@
 import "./EstatePage.css";
 import { useState, useEffect } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Filter from "../components/Filter";
 import RentBuy from "../components/RentBuy";
 
 export default function EstatePage() {
   const [properties, setProperties] = useState([]);
-  const { id } = useParams();
+  const [searchCity, setSearchCity] = useState("");
+  const [searchPriceFrom, setSearchPriceFrom] = useState("");
+  const [searchPriceTo, setSearchPriceTo] = useState("");
+  const [searchInteroirFrom, setSearchInteroirFrom] = useState("");
+  const [searchInteroirTo, setSearchInteroirTo] = useState("");
 
   useEffect(() => {
-    const url = `http://localhost:4000/properties/`;
+    const url = process.env.BASE_URL;
 
     fetch(url)
       .then((res) => res.json())
@@ -20,19 +24,49 @@ export default function EstatePage() {
       });
   }, []);
 
-  function renderProptery() {
-    return properties.map((property) => {
+  function renderPropterties() {
+    return properties.filter((property) => {
+      if(searchCity === "") {
+        return property
+      } else if (property.City.toLowerCase().includes(searchCity.toLowerCase())){
+        return property
+      
+      }}).filter((property) => {
+        if(searchPriceFrom === "" && searchPriceTo === "" ) { return true }
+        else{
+        if (Number(searchPriceTo) > 0) {
+          if (Number(property.Price) > Number(searchPriceFrom) && Number(property.Price) <= Number(searchPriceTo)) {
+          return true}}
+          else{
+            if (Number(property.Price) >= Number(searchPriceFrom)){
+              return true
+            }
+          }
+        }
+      }).filter((property) => {
+        if(searchInteroirFrom === "" && searchInteroirTo === "" ) { return true }
+        else{
+        if (Number(searchInteroirTo) > 0) {
+          if (Number(property.Interior) > Number(searchInteroirFrom) && Number(property.Interior) <= Number(searchInteroirTo)) {
+          return true}}
+          else{
+            if (Number(property.Interior) >= Number(searchInteroirFrom)){
+              return true
+            }
+          }
+        }
+    }).map((property) => {
       return (
         <Link className="linkBox" to={`/Details/${property.ID}`}>
           <div className="propertyCard">
             <img className="img" src={property.img[0]} />
             <div className="shortData">
               <div className="shortData2">
-                <p className="p">{property.City}</p>
-                <p className="p">{property.Street}</p>
+                <p className="adress">{property.City}</p>
+                <p className="adress">{property.Street}</p>
               </div>
-              <hr className="hr-h"></hr>
-              <p className="p">{property.Price}</p>
+                <hr></hr>
+              <p className="price">{property.Price} €</p>
             </div>
           </div>
         </Link>
@@ -43,8 +77,12 @@ export default function EstatePage() {
   return (
     <div className="estateDiv">
       <RentBuy />
-      <Filter />
-      <ul className="propteryList">{renderProptery()}</ul>
+      <Filter setSearchCity={setSearchCity} searchCity={searchCity}
+              setSearchPriceFrom={setSearchPriceFrom} searchPriceFrom={searchPriceFrom}
+              setSearchPriceTo={setSearchPriceTo} searchPriceTo={searchPriceTo}
+              setSearchInteroirFrom={setSearchInteroirFrom} searchInteroirFrom={searchInteroirFrom}
+              setSearchInteroirTo={setSearchInteroirTo} searchInteroirTo={searchInteroirTo}/>
+      <ul className="propteryList">{renderPropterties()}</ul>
     </div>
   );
 }

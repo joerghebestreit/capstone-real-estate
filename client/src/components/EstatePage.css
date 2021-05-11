@@ -127,6 +127,11 @@
   margin: 5px;
 }
 
+input:focus {
+  outline: none;
+  border: 1px solid #000000;
+}
+
 .input2 {
   width: 140px;
   padding-left: 10px;
@@ -138,11 +143,11 @@
   margin-bottom: 15px;
 }
 
-.p2 {
+/* .p2 {
   margin-left: 15px;
   margin-top: 12px;
   font-size: smaller;
-}
+} */
 
 .propertyCard {
   width: 345px;
@@ -155,7 +160,7 @@
   padding-bottom: 1px;
 }
 
-.p {
+.adress {
   margin: 5px;
 }
 
@@ -176,17 +181,12 @@
   margin: 10px;
 }
 
-.hr-h{
-  flex-shrink: 0;
-}
-
-.p1{
+.price{
   margin: 5px;
-  flex-grow: 1;
-
+  width: 50%;
+  text-align: right;
 }
 
 .shortData2{
-  flex-grow: 1;
-
+  width: 50%;
 }
