@@ -44,21 +44,9 @@ export default function Navigation() {
         getContentAnchorEl={null}
         anchorOrigin={{ vertical: 55, horizontal: "right" }}
       >
-        <MenuItem onClick={handleClose}>
-          <NavLink className="NavLink1" to="/about">
-            About us
-          </NavLink>
-        </MenuItem>
-        <MenuItem onClick={handleClose}>
-          <NavLink className="NavLink1" to="/estate">
-            Properties
-          </NavLink>
-        </MenuItem>
-        <MenuItem onClick={handleClose}>
-          <NavLink className="NavLink1" to="/contact">
-            Contact
-          </NavLink>
-        </MenuItem>
+        <MenuItem onClick={handleClose} component={NavLink} className="NavLink1" to="/about">About us</MenuItem>
+        <MenuItem onClick={handleClose} component={NavLink} className="NavLink1" to="/estate">Properties</MenuItem>
+        <MenuItem onClick={handleClose} component={NavLink} className="NavLink1" to="/contact">Contact</MenuItem>
       </Menu>
     </div>
   );

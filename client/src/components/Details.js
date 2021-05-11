@@ -29,7 +29,7 @@ export default function Details() {
               <p className="p-a">{property.Street}</p>
             </section>
             <section className="p-1-2">
-              <p className="p-a">{property.Price}</p>
+              <p className="p-a">{property.Price} €</p>
               <p className="p-a">ID: {property.ID}</p>
             </section>
           </div>
@@ -43,7 +43,7 @@ export default function Details() {
             </section>
             <section className="p-2-2">
               <p className="p-m2">{property.YearBuild}</p>
-              <p className="p-m2">{property.Interior}</p>
+              <p className="p-m2">{property.Interior} Sq. Ft.</p>
               <p className="p-m2">{property.Bedrooms}</p>
               <p className="p-m2">{property.Status}</p>
             </section>
