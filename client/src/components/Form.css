@@ -1,0 +1,30 @@
+.form{
+    margin-top: 15px;
+    opacity: 1 !important;
+}
+
+.nameInput {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    width: 90vw;
+    padding: 2px;
+}
+
+.mailInput {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    width: 90vw;
+    padding: 2px;
+}
+
+.textInput {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    width: 90vw;
+    height: 100px;
+    padding: 2px;
+}
+
+.btn{
+    margin-left: 1px !important;
+}

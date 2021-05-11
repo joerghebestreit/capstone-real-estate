@@ -1,0 +1,59 @@
+.text {
+    text-align: justify;
+  }
+  
+  .textContainerContactPage {
+    background: rgba(148, 211, 240, 0.8);
+    padding: 15px;
+    animation: showPage 1000ms;
+    align-self: flex-end;
+    color: black;
+  }
+  
+  @keyframes showPage {
+    0% {
+      transform: translateY(300px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  
+  .phoneNumber {
+    color: black;
+  }
+  
+  .mailAdress {
+    color: Black;
+  }
+  
+  .svgMail{
+    font-size: 22px;
+  } 
+  
+  .mapDiv{
+    width: 345px;
+    height: 200px;
+    margin-top: 25px;
+  }
+
+.hrMap{
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: black;
+}
+
+.hrForm{
+    margin-top: 25px;
+    margin-bottom: 5px;
+    color: black;
+}
+
+.pin{
+    height: 35px;
+    width: 35px;
+}
+
+.pinText{
+    font-size: 15pt;
+}
