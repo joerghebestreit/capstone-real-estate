@@ -16,6 +16,7 @@ export default function Map() {
           {...viewport}
           mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
           onViewportChange={setViewport}
+          mapStyle="mapbox://styles/joerghebestreit/ckoiv5hbi4kvm18mule3ubvpy"
           onViewportChange={(viewport) => {
             setViewport(viewport);
           }}

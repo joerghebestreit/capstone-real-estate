@@ -8,7 +8,7 @@ export default function Form() {
             <p>Mail</p>
             <input className="mailInput"></input>
             <p>Message</p>
-            <input className="textInput"></input>
+            <textarea className="textInput"></textarea>
             <div>
                 <button className="btn">Submit</button>
             </div>
