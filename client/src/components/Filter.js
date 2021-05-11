@@ -32,14 +32,14 @@ export default function Filter({setSearchCity, searchCity, setSearchPriceFrom, s
         <p>Filter</p>
       </div>
       {!active && (<div className={active ? "section2Aktiv" : "section2"}>
-        <p className="p2">Price</p>
+        <p className="filterHeadlines">Price</p>
         <div className="inputDiv">
           <input className="input" placeholder="from..."value={searchPriceFrom} onChange={(event) => {setSearchPriceFrom(event.target.value)}}></input>
           <input className="input" placeholder="to..."value={searchPriceTo} onChange={(event) => {setSearchPriceTo(event.target.value)}}></input>
         </div>
-        <p className="p2">City</p>
+        <p className="filterHeadlines">City</p>
         <input className="input" type="text" placeholder="City..." value={searchCity} onChange={(event) => {setSearchCity(event.target.value)}}></input>
-        <p className="p2">Square Feet</p>
+        <p className="filterHeadlines">Square Feet</p>
         <div className="inputDiv">
           <input className="input2" placeholder="from..."value={searchInteroirFrom} onChange={(event) => {setSearchInteroirFrom(event.target.value)}}></input>
           <input className="input2" placeholder="to..."value={searchInteroirTo} onChange={(event) => {setSearchInteroirTo(event.target.value)}}></input>

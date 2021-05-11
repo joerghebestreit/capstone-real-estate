@@ -143,11 +143,11 @@ input:focus {
   margin-bottom: 15px;
 }
 
-/* .p2 {
+.filterHeadlines {
   margin-left: 15px;
   margin-top: 12px;
   font-size: smaller;
-} */
+}
 
 .propertyCard {
   width: 345px;

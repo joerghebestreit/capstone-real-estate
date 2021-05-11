@@ -10,7 +10,7 @@ export default function Details() {
   const [property, setProperty] = useState();
  
   useEffect(() => {
-      const url = `http://localhost:4000/properties/${ID}`;
+      const url = `${process.env.REACT_APP_API_BASE_URL}/properties/${ID}`;
 
     fetch(url)
       .then((res) => res.json())

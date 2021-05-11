@@ -18,7 +18,6 @@
   height: 100%;
   display: grid;
   overflow-y: scroll;
-  /* padding: 1rem; */
   background-image: url("./components/images/backgroundHouse.jpeg");
   background-position: center;
   background-size: auto 100%;

@@ -13,7 +13,7 @@ export default function EstatePage() {
   const [searchInteroirTo, setSearchInteroirTo] = useState("");
 
   useEffect(() => {
-    const url = process.env.BASE_URL;
+    const url = `${process.env.REACT_APP_API_BASE_URL}/properties`;
 
     fetch(url)
       .then((res) => res.json())

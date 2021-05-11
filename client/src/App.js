@@ -42,7 +42,7 @@ function App() {
         </Switch>
       </main>
       <footer>
-        <Footer />
+        {location.pathname !== `http://localhost:3000/estate` && <Footer/>}
       </footer>
     </div>
   );
