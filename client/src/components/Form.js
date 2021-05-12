@@ -8,7 +8,7 @@ export default function Form() {
         localStorage.getItem("Name") || ""
         );
         useEffect (() => {  
-            localStorage.setItem("Name", JSON.stringify(valueName))
+            localStorage.setItem("Name", valueName)
         }, [valueName])
     const onChangeName = event => setValueName(event.target.value)
         
