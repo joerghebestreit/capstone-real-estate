@@ -8,10 +8,11 @@ export default function Map() {
       latitude: 52.526846,
       longitude: 13.338450,
       zoom: 14,
-      width: "92vw",
-      height: "55vw",
+      width: "345px",
+      height: "200px",
     });
-    return ( 
+    return (
+      <div className="map">
         <ReactMapGL
           {...viewport}
           mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
@@ -25,5 +26,6 @@ export default function Map() {
             <div className="pinText"><FaMapMarkerAlt className="pin"/>  Hebestreit Immo</div>
           </Marker>
         </ReactMapGL>
+      </div>
     )
 }

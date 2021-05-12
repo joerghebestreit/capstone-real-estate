@@ -3,6 +3,8 @@
   height: 100vh;
   grid-template-rows: [header] auto [content] 1fr [footer] 70px;
   font-family: sans-serif;
+  max-width: 919px;
+  margin: 0 auto;
 }
 
 .App__header {

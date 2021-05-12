@@ -10,6 +10,8 @@
   height: 67%;
   align-self: flex-end;
   color: black;
+  max-width: 682px;
+  margin: 0 auto;
 }
 
 @keyframes showPage {

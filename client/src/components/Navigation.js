@@ -16,7 +16,7 @@ export default function Navigation() {
   };
 
   return (
-    <div>
+    <div className="parentDivMenu">
       <svg
         aria-controls="simple-menu"
         aria-haspopup="true"

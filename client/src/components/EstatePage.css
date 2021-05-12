@@ -1,5 +1,8 @@
 .estateDiv {
   background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .rentBuyDiv {
@@ -35,6 +38,8 @@
   border: 1px solid #707070;
   border-radius: 20px;
   margin: 15px;
+  max-width: 400px;
+
 }
 
 .filterDivTotalActiv {
@@ -44,7 +49,8 @@
   border: 1px solid #707070;
   border-radius: 20px;
   margin: 15px;
-}
+  max-width: 400px;
+} 
 
 .svgChevron {
   margin: 5px;
@@ -158,6 +164,14 @@ input:focus {
   font-weight: 100;
   background-color: #dceff8;
   padding-bottom: 1px;
+}
+
+.propteryList{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(355px, 1fr));
+  gap: 1rem;
+  justify-items: center;
 }
 
 .adress {

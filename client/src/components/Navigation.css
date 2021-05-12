@@ -20,17 +20,19 @@
   cursor: pointer;
   height: 36px;
   margin: 15px;
+  position: relative;
 }
 
 .Menu {
-  position: relative;
+  position: absolute;
   left: 50px;
   top: 30px;
+  max-width: 350px;
 }
 
 .MuiMenu-paper {
   width: 70%;
-  position: relative;
+  /* position: relative; */
   left: 50px;
   top: 30px;
 }
