@@ -14,23 +14,33 @@ export default function EstatePage() {
 
   useEffect(() => {
     const url = `${process.env.REACT_APP_API_BASE_URL}/properties`;
-
+    
     fetch(url)
-      .then((res) => res.json())
-      .then((apiData) => {
-        setProperties((property) => {
-          return [...property, ...apiData];
-        });
+    .then((res) => res.json())
+    .then((apiData) => {
+      setProperties((property) => {
+        return [...property, ...apiData];
       });
+    });
   }, []);
 
   function renderPropterties() {
-    return properties.filter((property) => {
-      if(searchCity === "") {
-        return property
-      } else if (property.City.toLowerCase().includes(searchCity.toLowerCase())){
-        return property
-      
+    return properties.filter((active, property) => {
+      // if (active === true && property.option === "buy") {
+      //   return(
+      //     true
+      //   )}else if (!active === true && property.option === "rent"){
+      //     return(
+      //       true
+      //     )
+      //   }
+        
+      // }).filter((property) => {
+        if(searchCity === "") {
+          return property
+        } else if (property.City.toLowerCase().includes(searchCity.toLowerCase())){
+          return property
+        
       }}).filter((property) => {
         if(searchPriceFrom === "" && searchPriceTo === "" ) { return true }
         else{
@@ -76,7 +86,7 @@ export default function EstatePage() {
 
   return (
     <div className="estateDiv">
-      <RentBuy />
+      <RentBuy onRentBuy={renderPropterties}/>
       <Filter setSearchCity={setSearchCity} searchCity={searchCity}
               setSearchPriceFrom={setSearchPriceFrom} searchPriceFrom={searchPriceFrom}
               setSearchPriceTo={setSearchPriceTo} searchPriceTo={searchPriceTo}

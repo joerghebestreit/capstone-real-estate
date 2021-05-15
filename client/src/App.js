@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import HomePage from "./components/Home";
 import { NavLink } from "react-router-dom";
 import Details from "./components/Details";
+import ScrollMemory from 'react-router-scroll-memory';
 
 function App() {
   const location = useLocation();
@@ -23,6 +24,7 @@ function App() {
         <Navigation />
       </header>
       <main className="App__content">
+      <ScrollMemory />
         <Switch>
           <Route path="/about">
             <AboutPage />
@@ -42,7 +44,8 @@ function App() {
         </Switch>
       </main>
       <footer>
-        {location.pathname !== `http://localhost:3000/estate` && <Footer/>}
+      <Footer/>
+        {location.pathname !== `http://localhost:3000/estate` || `http://localhost:3000/Details` && <Footer/>}
       </footer>
     </div>
   );
