@@ -15,12 +15,12 @@ export default function RentBuy({onRentBuyChange}) {
 
   return (
     <div className="rentBuyDiv">
-      <p onClick={() => handleToggle("rent")} className={selected === "rent" ? "rentClicked" : "rent"}>
-        Rent
-      </p>
-      <hr></hr>
       <p onClick={() => handleToggle("buy")} className={selected === "buy" ? "buyClicked" : "buy"}>
         Buy
+      </p>
+      <hr></hr>
+      <p onClick={() => handleToggle("rent")} className={selected === "rent" ? "rentClicked" : "rent"}>
+        Rent
       </p>
     </div>
   );
