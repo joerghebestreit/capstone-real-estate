@@ -11,6 +11,8 @@ export default function EstatePage() {
   const [searchPriceTo, setSearchPriceTo] = useState("");
   const [searchInteroirFrom, setSearchInteroirFrom] = useState("");
   const [searchInteroirTo, setSearchInteroirTo] = useState("");
+  const [searchOption, setSearchOption] = useState("buy")
+
 
   useEffect(() => {
     const url = `${process.env.REACT_APP_API_BASE_URL}/properties`;
@@ -24,24 +26,27 @@ export default function EstatePage() {
     });
   }, []);
 
+  function handleRentBuyChange(filter) {
+    setSearchOption(filter)
+  };
+
   function renderPropterties() {
-    return properties.filter((active, property) => {
-      // if (active === true && property.option === "buy") {
-      //   return(
-      //     true
-      //   )}else if (!active === true && property.option === "rent"){
-      //     return(
-      //       true
-      //     )
-      //   }
-        
-      // }).filter((property) => {
+    return properties.filter((property) => {
+      return property.option === searchOption
+
+      }).filter((property) => {
         if(searchCity === "") {
           return property
         } else if (property.City.toLowerCase().includes(searchCity.toLowerCase())){
           return property
         
       }}).filter((property) => {
+        // property.option === searchOption) 
+        //   if (Number(property.Price) >= Number(searchPriceFrom) && Number(property.Price) <= Number(searchPriceTo)) {
+        //     return property
+        //   }
+        
+
         if(searchPriceFrom === "" && searchPriceTo === "" ) { return true }
         else{
         if (Number(searchPriceTo) > 0) {
@@ -86,7 +91,7 @@ export default function EstatePage() {
 
   return (
     <div className="estateDiv">
-      <RentBuy onRentBuy={renderPropterties}/>
+      <RentBuy onRentBuyChange={handleRentBuyChange}/>
       <Filter setSearchCity={setSearchCity} searchCity={searchCity}
               setSearchPriceFrom={setSearchPriceFrom} searchPriceFrom={searchPriceFrom}
               setSearchPriceTo={setSearchPriceTo} searchPriceTo={searchPriceTo}
