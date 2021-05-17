@@ -56,7 +56,7 @@ export default function Details() {
         </div>
       </div>
       : 
-      "Loading"
+      "Loading..."
     );
 }
 
