@@ -1,7 +1,9 @@
+import "./Add.css"
+
 export default function Add() {
     return(
         <div>
-            <div>
+            <div className="form1">
                 <label>ID</label>
                 <input></input>
                 <label>City</label>
