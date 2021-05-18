@@ -1,17 +1,19 @@
 import Crud from "./Crud"
 import { useState } from "react"
+import {useHistory} from "react-router-dom"
 
 export default function Login() {
     const [password, setPassword] = useState('')
+    const history = useHistory();
 
     function handleLogin(event){
-    if (setPassword(event.target.value) === "jorg") {
-        return(
-            <Crud />
-        )}else{
-            alert("wrong password!")
-            // reset()
-        }
+        if (password === "jorg") {
+            return(
+                history.push("/crud")
+            )}else{
+                alert("wrong password!")
+                // reset()
+            }
     }
     
     return(
