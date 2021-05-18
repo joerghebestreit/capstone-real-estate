@@ -1,11 +1,14 @@
 import { NavLink } from "react-router-dom";
+import "./Crud.css"
 
 export default function Crud() {
     return(
         <div>
-            <NavLink to="/add">Add</NavLink>
-            <NavLink to="/update">Update</NavLink>
-            <NavLink to="/delete">Delete</NavLink>
+            <section className="crud-content">
+                <NavLink className="navLinkAdd" to="/add">Add</NavLink>
+                <NavLink className="navLinkUpdate" to="/update">Update</NavLink>
+                <NavLink className="navLinkDelete"to="/delete">Delete</NavLink>
+            </section>
         </div>
     )
 }
