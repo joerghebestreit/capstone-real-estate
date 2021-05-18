@@ -6,13 +6,12 @@ export default function Login() {
     const [password, setPassword] = useState('')
     const history = useHistory();
 
-    function handleLogin(event){
+    function handleLogin(){
         if (password === "jorg") {
             return(
                 history.push("/crud")
             )}else{
                 alert("wrong password!")
-                // reset()
             }
     }
     
