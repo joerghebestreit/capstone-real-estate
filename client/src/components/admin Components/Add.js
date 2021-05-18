@@ -1,7 +1,10 @@
+import "./Add.css"
+
 export default function Add() {
     return(
         <div>
-            <div>
+            <p>Add</p>
+            <section className="textSection">
                 <label>ID</label>
                 <input></input>
                 <label>City</label>
@@ -22,11 +25,11 @@ export default function Add() {
                 <input></input>
                 <label>option</label>
                 <input></input>
-            </div>
-            <div>
+            </section>
+            <section className="imgSection">
                 <label>img</label>
                 <input></input>
-            </div>
+            </section>
             <button>Add</button>
         </div>
     )
