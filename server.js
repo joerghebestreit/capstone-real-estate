@@ -21,7 +21,8 @@ app.get("/properties", (req, res) => {
 });
 
 app.get(`/properties/:id`, (req, res) => {
-  Apartments.find({ ID: req.params.id}).then((apartments) => {
+  Apartments.find({ ID: req.params.id})
+  .then((apartments) => {
     res.json(apartments);
     res.status(200);
   });
@@ -42,7 +43,7 @@ app.post("/properties", (req, res) => {
 })
 
 app.delete("/properties/:id", (req, res) =>{
-  Apartments.findByIdAndDelete({ ID: req.params.id})
+  Apartments.findOneAndDelete({ ID: req.params.id})
   .then((Apartments) => {
     res.status(200);
     res.json(Apartments);
@@ -53,10 +54,9 @@ app.delete("/properties/:id", (req, res) =>{
 });
 
 app.patch("/properties/:id", (req, res)=>{
-  Apartments.findByIdAndUpdate(req.params.ID, req.body, {new: true})
+  Apartments.findOneAndUpdate( {ID: req.params.id},  {new: true}, req.body )
   .then((newApartment)=>{
     if(newApartment){
-      console.log(newApartment);
       res.status(200);
       res.json(newApartment);
     }else{
