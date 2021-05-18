@@ -14,8 +14,8 @@ export default function Login(event) {
     return(
         <div>
             <label>Password:</label>
-            <input onChange={event => setPassword(event.target.value)}></input>
-            <button>Login</button>
+            <input type="password" password={password} onChange={event => setPassword(event.target.value)}></input>
+            <button type="reset">Login</button>
         </div>
     )
 }
