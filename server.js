@@ -28,6 +28,45 @@ app.get(`/properties/:id`, (req, res) => {
   });
 });
 
+app.post("/properties", (req, res) => {
+  Apartments.create(req.body)
+  .then(Apartments => {
+    res.status(200);
+    res.json(Apartments);
+  })
+  .catch(error =>{
+    res.status(500);
+    res.json({
+      error:"internal server error",
+    })
+  })
+})
+
+app.delete("/properties/:id", (req, res) =>{
+  Apartments.findOneAndDelete({ ID: req.params.id})
+  .then((Apartments) => {
+    res.status(200);
+    res.json(Apartments);
+  })
+  .catch((error)=>{
+      console.error(error);
+  });
+});
+
+app.patch("/properties/:id", (req, res)=>{
+  Apartments.findOneAndUpdate({ID: req.params.id}, {new: true}, req.body)
+  .then((newApartment)=>{
+    if(newApartment){
+      res.status(200);
+      res.json(newApartment);
+    }else{
+      console.error("not found");
+      res.status(404);
+    }
+  })
+})
+
+
 mongoose.connect(
   "mongodb+srv://joerghebestreit:yDsBhf74U94pMT32@blog-app.ovjjd.mongodb.net/capstone-real-estate?retryWrites=true&w=majority",
   { useNewUrlParser: true, useUnifiedTopology: true }
