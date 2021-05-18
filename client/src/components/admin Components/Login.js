@@ -4,7 +4,7 @@ import { useState } from "react"
 
 export default function Login(event) {
     const [password, setPassword] = useState('')
-    if (event.target.value === "jorg") {
+    if (password === "jorg") {
         return(
             // reset();
             <Crud />
