@@ -54,7 +54,7 @@ app.delete("/properties/:id", (req, res) =>{
 });
 
 app.patch("/properties/:id", (req, res)=>{
-  Apartments.findOneAndUpdate( {ID: req.params.id},  {new: true}, req.body )
+  Apartments.findOneAndUpdate({ID: req.params.id}, {new: true}, req.body)
   .then((newApartment)=>{
     if(newApartment){
       res.status(200);
