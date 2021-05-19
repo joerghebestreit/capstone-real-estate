@@ -49,7 +49,7 @@
 .crud-content{
     display: flex;
     flex-direction: column;
-    border:1px solid #707070;
+    border: 1px solid #707070;
     border-radius: 8px;
     text-align: center;
     margin-top: 12%;
