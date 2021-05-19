@@ -1,4 +1,59 @@
-.form1{
-    display: flex;
-    flex-direction: column;
+.headlineAdd{
+    text-align: center;
+    margin-top: 12%;
 }
+
+.form{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 10;
+    border: 1px solid #707070;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 15px;
+}
+
+input, textarea{
+    margin-top: 10px;
+    border-radius: 20px;
+    border: 1px solid #707070;
+    padding: 2px;
+    padding-left: 8px;
+}
+
+.inputId{
+    justify-self: end;
+    width: 40px;
+}
+
+label{
+    margin-top: 12px;
+}
+
+.form2{
+    display: grid;
+    grid-template-columns: auto auto;
+    border: 1px solid #707070;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 15px;
+}
+
+.btnAdd{
+    border-radius: 20px;
+    padding: 5px 15px;
+    margin: 15px;
+    cursor: pointer;
+    outline: none;
+    color: white;
+    background-color: #2196f3;
+    border: none;
+    font-weight:bold;
+    box-shadow: 0 0 4px #999;
+}
+
+.btnAdd:active {
+    background-color: #6eb9f7;
+    background-size: 100%;
+    transition: background 0s;
+  }
