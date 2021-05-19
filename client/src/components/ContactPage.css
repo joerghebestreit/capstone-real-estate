@@ -2,6 +2,15 @@
     text-align: justify;
   }
   
+.contact-content{
+  overflow-y: scroll; 
+  background-image: url("./images/backgroundHouse.jpeg");
+  background-position: center;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-color: #94d3f0;
+}
+
   .textContainerContactPage {
     background: rgba(148, 211, 240, 0.8);
     padding: 15px;

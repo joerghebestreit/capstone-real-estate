@@ -3,9 +3,12 @@ import "./Add.css"
 export default function Add() {
     return(
         <div>
-            <div className="form1">
-                <label>ID</label>
-                <input></input>
+            <h4 className="headlineAdd">Add</h4>
+            <div className="form">
+                <label className="lableId">ID:</label>
+                <input className="inputId"></input>
+            </div>
+            <div className="form">
                 <label>City</label>
                 <input></input>
                 <label>Street</label>
@@ -18,18 +21,18 @@ export default function Add() {
                 <input></input>
                 <label>Status</label>
                 <input></input>
-                <label>Discription</label>
-                <input></input>
                 <label>Year Build</label>
+                <input></input>
+                <label>Discription</label>
                 <input></input>
                 <label>option</label>
                 <input></input>
             </div>
-            <div>
+            <div className="form">
                 <label>img</label>
                 <input></input>
             </div>
-            <button>Add</button>
+            <button className="btnAdd">Add</button>
         </div>
     )
 }

@@ -1,0 +1,58 @@
+.login-content{
+    background-image: url("../images/backgroundHouse.jpeg");
+    background-position: center;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-color: #94d3f0;
+}
+
+.fields{
+    display: flex;
+    flex-direction: column;
+    padding: 25px 15px;
+    margin-top: 50%;
+    margin-bottom: 50%;
+    background-color: #94d3f0;
+    background: rgba(148, 211, 240, 0.8);
+}
+
+.passwordInput{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 8px;
+    padding-left: 15px;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    border: none;
+    width: 253px;
+}
+
+.loginBtn{
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 8px 15px;
+    cursor: pointer;
+    outline: none;
+    color: white;
+    background-color: #2196f3;
+    border: none;
+    font-weight:bold;
+    box-shadow: 0 0 4px #999;
+    transition: background 0.8s;
+}
+
+.loginBtn:active {
+    background-color: #6eb9f7;
+    background-size: 100%;
+    transition: background 0s;
+  }
+
+.loginBtn:hover {
+    background: #47a7f5 radial-gradient(circle, transparent 1%, #47a7f5 1%)
+      center/15000%;
+}
+
+.passwordLabel{
+    margin-left: 10px;
+    font-weight:bold;
+}

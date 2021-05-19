@@ -1,17 +1,25 @@
 .text {
   text-align: justify;
 }
+.about-content{
+  background-image: url("./images/backgroundHouse.jpeg");
+  background-position: center;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-color: #94d3f0;
+}
 
 .textContainer {
   background-color: #94d3f0;
   opacity: 80%;
   padding: 15px;
   animation: showPage 1000ms;
-  height: 67%;
+  height: 68%;
   align-self: flex-end;
   color: black;
   max-width: 682px;
   margin: 0 auto;
+  margin-top: 37%;
 }
 
 @keyframes showPage {
