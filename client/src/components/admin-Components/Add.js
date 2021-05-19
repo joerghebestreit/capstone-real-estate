@@ -4,33 +4,33 @@ export default function Add() {
     return(
         <div>
             <h4 className="headlineAdd">Add</h4>
-            <div className="form">
+            <div className="formAdd">
                 <label className="lableId">ID:</label>
                 <input className="inputId"></input>
             </div>
-            <div className="form">
+            <div className="formAdd">
                 <label>City</label>
-                <input></input>
+                <input className="inputAdd"></input>
                 <label>Street</label>
-                <input></input>
+                <input className="inputAdd"></input>
                 <label>Price (€)</label>
-                <input></input>
+                <input className="inputAdd"></input>
                 <label>Interior (Sq. Ft.)</label>
-                <input></input>
+                <input className="inputAdd"></input>
                 <label>Bedrooms</label>
-                <input></input>
+                <input className="inputAdd"></input>
                 <label>Status</label>
-                <input></input>
+                <input className="inputAdd"></input>
                 <label>Year Build</label>
-                <input></input>
+                <input className="inputAdd"></input>
                 <label>Discription</label>
-                <input></input>
+                <input className="inputAdd"></input>
                 <label>option</label>
-                <input></input>
+                <input className="inputAdd"></input>
             </div>
-            <div className="form">
+            <div className="formAdd">
                 <label>img</label>
-                <input></input>
+                <input className="inputAdd"></input>
             </div>
             <button className="btnAdd">Add</button>
         </div>

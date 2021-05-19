@@ -3,7 +3,7 @@
     margin-top: 12%;
 }
 
-.form{
+.formAdd{
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: 10;
@@ -13,7 +13,7 @@
     margin: 15px;
 }
 
-input, textarea{
+.inputAdd{
     margin-top: 10px;
     border-radius: 20px;
     border: 1px solid #707070;
@@ -24,6 +24,8 @@ input, textarea{
 .inputId{
     justify-self: end;
     width: 40px;
+    border-radius: 20px;
+    border: 1px solid #707070;
 }
 
 label{
