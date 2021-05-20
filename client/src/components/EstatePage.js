@@ -77,7 +77,7 @@ export default function EstatePage() {
             <img className="img" src={property.img[0]} />
             <div className="shortData">
               <div className="shortData2">
-                <p className="adress">{property.City}</p>
+                <p className="adress">{property.City}</p> 
                 <p className="adress">{property.Street}</p>
               </div>
                 <hr></hr>

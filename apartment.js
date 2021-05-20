@@ -12,6 +12,7 @@ const ApartmentSchema = new Schema(
     Discription: String,
     ID: String,
     img: Array,
+    Option: String
   },
   {
     timestamps: true,
