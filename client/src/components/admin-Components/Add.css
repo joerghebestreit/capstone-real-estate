@@ -10,7 +10,7 @@
     border: 1px solid #707070;
     border-radius: 8px;
     padding: 10px;
-    margin: 15px;
+    margin-top: 15px;
 }
 
 .inputAdd{
@@ -39,13 +39,12 @@ label{
     border: 1px solid #707070;
     border-radius: 8px;
     padding: 10px;
-    margin: 15px;
 }
 
 .btnAdd{
     border-radius: 20px;
     padding: 5px 15px;
-    margin: 15px;
+    margin-top: 15px;
     cursor: pointer;
     outline: none;
     color: white;
@@ -75,5 +74,11 @@ label{
     border: 1px solid #707070;
     border-radius: 8px;
     padding: 10px;
-    margin: 15px;
+    margin-top: 15px;
+}
+
+.addFormTotal{
+    min-width: 345px;
+    max-width: 500px;
+    margin: 0 auto;
 }

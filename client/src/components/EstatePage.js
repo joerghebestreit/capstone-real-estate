@@ -41,12 +41,6 @@ export default function EstatePage() {
           return property
         
       }}).filter((property) => {
-        // property.option === searchOption) 
-        //   if (Number(property.Price) >= Number(searchPriceFrom) && Number(property.Price) <= Number(searchPriceTo)) {
-        //     return property
-        //   }
-        
-
         if(searchPriceFrom === "" && searchPriceTo === "" ) { return true }
         else{
         if (Number(searchPriceTo) > 0) {

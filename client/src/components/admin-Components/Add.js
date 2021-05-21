@@ -67,7 +67,7 @@ export default function Add() {
       }
 
     return(
-        <form onSubmit={handleSubmit}>
+        <form className="addFormTotal" onSubmit={handleSubmit}>
             <h4 className="headlineAdd">Add</h4>
             <div className="formAdd">
                 <label for="id" className="lableId">ID:</label>
@@ -95,11 +95,9 @@ export default function Add() {
             </div>
             <div className="formAddImg">
                 <label className="labelImg">upload image</label>
-                <input type="file" name="file" className="inputAddImg" value={images} onChange={upload}></input>
+                <input type="file" multiple="multiple" name="file" className="inputAddImg" onChange={upload}></input>
             </div>
             <button type="submit" className="btnAdd">Add</button>
         </form>
     )
 }
-
-                
