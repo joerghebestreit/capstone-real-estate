@@ -1,5 +1,5 @@
 import "./App.css";
-import { Switch, Route, Redirect, useLocation } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import Navigation from "./components/Navigation";
 import ContactPage from "./components/ContactPage";
 import AboutPage from "./components/AboutPage";
@@ -16,7 +16,6 @@ import Delete from "./components/admin-Components/Delete"
 import Update from "./components/admin-Components/Update"
 
 function App() {
-  const location = useLocation();
 
   return (
     <div className="App">
@@ -65,7 +64,7 @@ function App() {
       </main>
       <footer>
         <Switch>
-          <Route path={["/", "/about", "/contact"]}>
+          <Route path={["/about", "/contact", "/home"]}>
             <Footer/>
           </Route>
         </Switch>

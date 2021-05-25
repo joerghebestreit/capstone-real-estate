@@ -30,9 +30,9 @@ app.get(`/properties/:id`, (req, res) => {
 
 app.post("/properties", (req, res) => {
   Apartments.create(req.body)
-  .then(Apartments => {
+  .then(newApartment => {
     res.status(200);
-    res.json(Apartments);
+    res.json(newApartment);
   })
   .catch(error =>{
     res.status(500);

@@ -1,16 +1,15 @@
 import "./Footer.css";
 import {AiFillFacebook} from "react-icons/ai"
-import {GrInstagram} from "react-icons/gr"
 import {FaInstagram, FaPhoneAlt} from "react-icons/fa"
 
 function Footer() {
   return (
     <div className="footer">
       <div>
-        <a href="https://www.facebook.com/" class="external" target="_blank">
+        <a href="https://www.facebook.com/" class="external" rel="noreferrer" target="_blank">
           <AiFillFacebook className="fbIcon"/>
         </a>
-        <a target="_blank" href="https://www.instagram.com/">
+        <a target="_blank" rel="noreferrer" href="https://www.instagram.com/">
           <FaInstagram className="instaIcon"/>
         </a>
       </div>
@@ -22,6 +21,6 @@ function Footer() {
       </a>
     </div>
   );
-}
+} 
 
 export default Footer;

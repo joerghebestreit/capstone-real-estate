@@ -41,12 +41,6 @@ export default function EstatePage() {
           return property
         
       }}).filter((property) => {
-        // property.option === searchOption) 
-        //   if (Number(property.Price) >= Number(searchPriceFrom) && Number(property.Price) <= Number(searchPriceTo)) {
-        //     return property
-        //   }
-        
-
         if(searchPriceFrom === "" && searchPriceTo === "" ) { return true }
         else{
         if (Number(searchPriceTo) > 0) {
@@ -74,10 +68,10 @@ export default function EstatePage() {
       return (
         <Link className="linkBox" to={`/Details/${property.ID}`}>
           <div className="propertyCard">
-            <img className="img" src={property.img[0]} />
+            <img className="img" alt="" src={property.img[0]} />
             <div className="shortData">
               <div className="shortData2">
-                <p className="adress">{property.City}</p>
+                <p className="adress">{property.City}</p> 
                 <p className="adress">{property.Street}</p>
               </div>
                 <hr></hr>
