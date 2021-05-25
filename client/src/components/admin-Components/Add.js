@@ -48,25 +48,28 @@ export default function Add() {
     }
 
     function upload(event) {
+        event.preventDefault();
+
         const url = `https://api.cloudinary.com/v1_1/${CLOUDNAME}/image/upload`
-    
+        
         const formData = new FormData()
         formData.append('file', event.target.files[0])
+        // formData.append('file', event.target.files[0])
         formData.append('upload_preset', PRESET)
 
-        fetch(url, {
+        return fetch(url, {
         method: "PUT",
-        body: formData,
+        body: formData
         }).then((res) => res.json())
           .then(onImageSave)
           .catch(err => console.error(err))
-      }
+        }
     
       function onImageSave(res) {
         setImages(res.url)
       }
 
-    return(
+        return(
         <form className="addFormTotal" onSubmit={handleSubmit}>
             <h4 className="headlineAdd">Add</h4>
             <div className="formAdd">
@@ -99,5 +102,6 @@ export default function Add() {
             </div>
             <button type="submit" className="btnAdd">Add</button>
         </form>
-    )
+        )
+    
 }

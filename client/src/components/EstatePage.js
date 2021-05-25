@@ -68,7 +68,7 @@ export default function EstatePage() {
       return (
         <Link className="linkBox" to={`/Details/${property.ID}`}>
           <div className="propertyCard">
-            <img className="img" src={property.img[0]} />
+            <img className="img" alt="" src={property.img[0]} />
             <div className="shortData">
               <div className="shortData2">
                 <p className="adress">{property.City}</p> 

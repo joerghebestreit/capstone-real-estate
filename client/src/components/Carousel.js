@@ -25,7 +25,7 @@ export default function Carousel({images}) {
         {images.map((images, index) => {
           return(
             <div className={index === picture ? "slideActive" : "slide"} key={index}>
-                {index === picture && (<img className="image" src={images}/>)} 
+                {index === picture && (<img className="image" src={images} alt=""/>)} 
             </div>
           )
         })}
