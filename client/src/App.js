@@ -64,7 +64,7 @@ function App() {
       </main>
       <footer>
         <Switch>
-          <Route path={["/about", "/contact", "/home"]}>
+          <Route path={["/about", "/contact", "/"]}>
             <Footer/>
           </Route>
         </Switch>
