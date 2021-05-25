@@ -14,6 +14,8 @@ export default function Add() {
     const [discription, setDiscription] = useState("")
     const [option, setOption] = useState("")
     const [images, setImages] = useState('')
+    const CLOUDNAME = process.env.REACT_APP_CLOUDINARY_CLOUDNAME
+    const PRESET = process.env.REACT_APP_CLOUDINARY_PRESET_NAME
     
         function handleSubmit(event){
             event.preventDefault()
@@ -44,6 +46,26 @@ export default function Add() {
                 alert("Seccessfully Submitted")
             })
         }
+        function upload(event) {
+            event.preventDefault();
+            
+            const url = `https://api.cloudinary.com/v1_1/${CLOUDNAME}/image/upload`
+            
+                const formData = new FormData()
+                formData.append('file', event.target.files[0])
+                formData.append('upload_preset', PRESET)
+        
+                return fetch(url, {
+                method: "PUT",
+                body: formData
+                }).then((res) => res.json())
+                  .then(onImageSave)
+                  .catch(err => console.error(err))
+                }
+                function onImageSave(res) {
+                  setImages(res.url)
+                }
+            
         return(
             <form className="addFormTotal" onSubmit={handleSubmit}>
         <h4 className="headlineAdd">Add</h4>
@@ -79,30 +101,3 @@ export default function Add() {
     </form>
     )
 }
-function upload(event, imageUploads) {
-    const CLOUDNAME = process.env.REACT_APP_CLOUDINARY_CLOUDNAME
-    const PRESET = process.env.REACT_APP_CLOUDINARY_PRESET_NAME
-    // const [images, setImages] = useState('')
-    event.preventDefault();
-    
-    const url = `https://api.cloudinary.com/v1_1/${CLOUDNAME}/image/upload`
-    
-        const filesListArray = Array.from(imageUploads);
-        const imagePromises = filesListArray.map((imageUpload) => {
-        const formData = new FormData()
-        formData.append('file', imageUpload)
-        // formData.append('file', event.target.files[0])
-        formData.append('upload_preset', PRESET)
-
-        return fetch(url, {
-        method: "PUT",
-        body: formData
-        }).then((res) => res.json())
-        //   .then(onImageSave)
-          .catch(err => console.error(err))
-        })
-        // function onImageSave(res) {
-        //   setImages(res.url)
-        // }
-     return imagePromises;
-    }
