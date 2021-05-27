@@ -76,10 +76,9 @@ if (process.env.NODE_ENV === "production") {
   });
 }
 
-mongoose.connect(
-  "mongodb+srv://joerghebestreit:yDsBhf74U94pMT32@blog-app.ovjjd.mongodb.net/capstone-real-estate?retryWrites=true&w=majority",
-  { useNewUrlParser: true, useUnifiedTopology: true }
-);
+const connect = process.env.REACT_APP_MONGOOSE_CONNECT;
+
+mongoose.connect(connect, { useNewUrlParser: true, useUnifiedTopology: true });
 
 const mongodb = mongoose.connection;
 
