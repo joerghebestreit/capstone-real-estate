@@ -1,5 +1,7 @@
+require("dotenv").config();
 const mongoose = require("mongoose");
 const express = require("express");
+const path = require("path");
 const app = express();
 const Apartments = require("./apartment");
 
@@ -81,8 +83,10 @@ mongoose.connect(
 
 const mongodb = mongoose.connection;
 
+const { PORT } = process.env;
+
 mongodb.on("open", () => {
-  app.listen(4000, () => {
-    console.log("Listening on http://localhost:4000");
+  app.listen(PORT, () => {
+    console.log(`Listening on ${PORT}`);
   });
 });
