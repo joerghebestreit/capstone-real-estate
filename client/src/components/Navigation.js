@@ -21,8 +21,8 @@ export default function Navigation() {
         aria-controls="simple-menu"
         aria-haspopup="true"
         onClick={handleClick}
-        xmlns="http://www.w3.org/2000/svg"
         className="menuIcon"
+        xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
         stroke="white"
@@ -41,12 +41,42 @@ export default function Navigation() {
         keepMounted
         open={Boolean(openMenu)}
         onClose={handleClose}
+        openMenu={openMenu}
         getContentAnchorEl={null}
         anchorOrigin={{ vertical: 55, horizontal: "right" }}
       >
-        <MenuItem onClick={handleClose} component={NavLink} className="NavLink1" to="/about">About us</MenuItem>
-        <MenuItem onClick={handleClose} component={NavLink} className="NavLink1" to="/estate">Properties</MenuItem>
-        <MenuItem onClick={handleClose} component={NavLink} className="NavLink1" to="/contact">Contact</MenuItem>
+        <MenuItem
+          onClick={handleClose}
+          component={NavLink}
+          className="NavLink1"
+          to="/about"
+        >
+          About us
+        </MenuItem>
+        <MenuItem
+          onClick={handleClose}
+          component={NavLink}
+          className="NavLink1"
+          to="/estate"
+        >
+          Properties
+        </MenuItem>
+        <MenuItem
+          onClick={handleClose}
+          component={NavLink}
+          className="NavLink1"
+          to="/contact"
+        >
+          Contact
+        </MenuItem>
+        <MenuItem
+          onClick={handleClose}
+          component={NavLink}
+          className="NavLink1"
+          to="/login"
+        >
+          Login
+        </MenuItem>
       </Menu>
     </div>
   );
