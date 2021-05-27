@@ -17,22 +17,23 @@
 }
 
 .menuIcon {
+  position: relative;
+  top: 0;
+  left: 0;
   cursor: pointer;
   height: 36px;
   margin: 15px;
-  position: relative;
 }
 
 .Menu {
   position: absolute;
-  left: 50px;
-  top: 30px;
+  left: 500px;
+  top: 300px;
   max-width: 350px;
 }
 
 .MuiMenu-paper {
   width: 70%;
-  /* position: relative; */
   left: 50px;
   top: 30px;
 }

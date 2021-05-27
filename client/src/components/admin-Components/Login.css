@@ -27,6 +27,18 @@
     width: 253px;
 }
 
+.passwordInput:focus{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 8px;
+    padding-left: 15px;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    border: none;
+    outline: none;
+    width: 253px;
+}
+
 .loginBtn{
     border-bottom-right-radius: 20px;
     border-top-right-radius: 20px;

@@ -5,9 +5,10 @@ import {useHistory} from "react-router-dom"
 export default function Login() {
     const [password, setPassword] = useState('')
     const history = useHistory();
+    const loginPassword = `${process.env.REACT_APP_lOGIN}`
 
     function handleLogin(){
-        if (password === "jorg") {
+        if (password === "jorg123") {
             return(
                 history.push("/crud")
             )}else{
@@ -27,4 +28,3 @@ export default function Login() {
         </div>
     )
 }
-

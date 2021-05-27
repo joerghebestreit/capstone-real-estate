@@ -8,15 +8,14 @@ import Footer from "./components/Footer";
 import HomePage from "./components/Home";
 import { NavLink } from "react-router-dom";
 import Details from "./components/Details";
-import ScrollMemory from 'react-router-scroll-memory';
-import Login from "./components/admin-Components/Login"
-import Crud from "./components/admin-Components/Crud"
-import Add from "./components/admin-Components/Add"
-import Delete from "./components/admin-Components/Delete"
-import Update from "./components/admin-Components/Update"
+import ScrollMemory from "react-router-scroll-memory";
+import Login from "./components/admin-Components/Login";
+import Crud from "./components/admin-Components/Crud";
+import Add from "./components/admin-Components/Add";
+import Delete from "./components/admin-Components/Delete";
+import Update from "./components/admin-Components/Update";
 
 function App() {
-
   return (
     <div className="App">
       <header className="App__header">
@@ -28,7 +27,7 @@ function App() {
         <Navigation />
       </header>
       <main className="App__content">
-      <ScrollMemory />
+        <ScrollMemory />
         <Switch>
           <Route path="/about">
             <AboutPage />
@@ -39,22 +38,22 @@ function App() {
           <Route path="/contact">
             <ContactPage />
           </Route>
-          <Route path="/Details/:ID" >
+          <Route path="/Details/:ID">
             <Details />
           </Route>
-          <Route path="/login" >
+          <Route path="/login">
             <Login />
           </Route>
-          <Route path="/crud" >
+          <Route path="/crud">
             <Crud />
           </Route>
-          <Route path="/add" >
+          <Route path="/add">
             <Add />
           </Route>
-          <Route path="/delete" >
+          <Route path="/delete">
             <Delete />
           </Route>
-          <Route path="/update" >
+          <Route path="/update">
             <Update />
           </Route>
           <Route path="/">
@@ -64,8 +63,8 @@ function App() {
       </main>
       <footer>
         <Switch>
-          <Route path={["/about", "/contact", "/"]}>
-            <Footer/>
+          <Route exact path={["/about", "/contact", "/", "/login"]}>
+            <Footer />
           </Route>
         </Switch>
       </footer>
