@@ -20,7 +20,7 @@ export default function Details() {
 
   return property ? (
     <div>
-      <Carousel images={property.img} />
+      <Carousel images={property.Img} />
       <div className="detailDiv">
         <div className="p-1">
           <section className="p-1-1">

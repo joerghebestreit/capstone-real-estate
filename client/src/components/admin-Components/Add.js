@@ -4,7 +4,7 @@ import "./Add.css";
 function UploadImages(imagesFiles) {
   const CLOUDNAME = process.env.REACT_APP_CLOUDINARY_CLOUDNAME;
   const PRESET = process.env.REACT_APP_CLOUDINARY_PRESET_NAME;
-  const [imageFiles, setImageFiles] = useState([]);
+  const [imageFiles, /*setImageFiles*/] = useState([]);
 
   const url = `https://api.cloudinary.com/v1_1/${CLOUDNAME}/image/upload`;
 

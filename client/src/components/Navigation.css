@@ -27,8 +27,6 @@
 
 .Menu {
   position: absolute;
-  left: 500px;
-  top: 300px;
   max-width: 350px;
 }
 
@@ -50,4 +48,8 @@
   background-color: #dceff8;
   color: #707070;
   text-decoration: none;
+}
+
+.parentDivMenu{
+  max-width: 375px;
 }

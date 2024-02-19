@@ -3,6 +3,7 @@ import "./Navigation.css";
 import { useState } from "react";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
+import Button from "@material-ui/core/Button";
 
 export default function Navigation() {
   const [openMenu, setOpenMenu] = useState(null);
@@ -17,33 +18,39 @@ export default function Navigation() {
 
   return (
     <div className="parentDivMenu">
-      <svg
-        aria-controls="simple-menu"
-        aria-haspopup="true"
-        onClick={handleClick}
-        className="menuIcon"
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="white"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="M4 6h16M4 12h16M4 18h16"
-        />
-      </svg>
+        <svg
+          aria-controls="simple-menu"
+          aria-haspopup="true"
+          onClick={handleClick}
+          className="menuIcon"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="white"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M4 6h16M4 12h16M4 18h16"
+          />
+        </svg>
       <Menu
         id="simple-menu"
         className="Menu"
-        openMenu={openMenu}
+        anchorEl={openMenu}
         keepMounted
         open={Boolean(openMenu)}
         onClose={handleClose}
-        openMenu={openMenu}
         getContentAnchorEl={null}
-        anchorOrigin={{ vertical: 55, horizontal: "right" }}
+        anchorOrigin={{
+          vertical: 'bottom',
+          horizontal: 'right',
+        }}
+        transformOrigin={{
+          vertical: 'top',
+          horizontal: 'right',
+        }}
       >
         <MenuItem
           onClick={handleClose}
@@ -78,6 +85,6 @@ export default function Navigation() {
           Login
         </MenuItem>
       </Menu>
-    </div>
+      </div>
   );
 }

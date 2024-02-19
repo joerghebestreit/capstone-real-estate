@@ -32,16 +32,16 @@ export default function EstatePage() {
   function renderPropterties() {
     return properties
       .filter((property) => {
-        return property.option === searchOption;
+        return property.Option === searchOption;
       })
       .filter((property) => {
         if (searchCity === "") {
           return property;
         } else if (
           property.City.toLowerCase().includes(searchCity.toLowerCase())
-        ) {
-          return property;
-        }
+        ) 
+        return property;
+        return ""
       })
       .filter((property) => {
         if (searchPriceFrom === "" && searchPriceTo === "") {
@@ -59,7 +59,7 @@ export default function EstatePage() {
               return true;
             }
           }
-        }
+        }return ""
       })
       .filter((property) => {
         if (searchInteroirFrom === "" && searchInteroirTo === "") {
@@ -77,13 +77,13 @@ export default function EstatePage() {
               return true;
             }
           }
-        }
+        }return ""
       })
       .map((property) => {
         return (
           <Link className="linkBox" to={`/Details/${property.ID}`}>
             <div className="propertyCard">
-              <img className="img" alt="" src={property.img[0]} />
+              <img className="img" alt="" src={property.Img[0]} />
               <div className="shortData">
                 <div className="shortData2">
                   <p className="adress">{property.City}</p>
