@@ -4,8 +4,10 @@ const express = require("express");
 const path = require("path");
 const app = express();
 const Apartments = require("./apartment");
+const cors = require('cors');
 
 app.use(express.json());
+app.use(cors());
 app.use((req, res, next) => {
   const { method, url } = req;
   console.log("custom middleware");
@@ -16,6 +18,7 @@ app.use((req, res, next) => {
 app.get("/api/properties", (req, res) => {
   Apartments.find().then((apartments) => {
     res.json(apartments);
+    console.log("GET")
     res.status(200);
   });
 });
@@ -78,7 +81,7 @@ if (process.env.NODE_ENV === "production") {
 
 const connect = process.env.REACT_APP_MONGOOSE_CONNECT;
 
-mongoose.connect(connect, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(connect, { dbName:'capstone-real-estate', useNewUrlParser: true, useUnifiedTopology: true });
 
 const mongodb = mongoose.connection;
 

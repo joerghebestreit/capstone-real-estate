@@ -3,7 +3,7 @@
   height: 100vh;
   grid-template-rows: [header] auto [content] 1fr [footer] auto;
   font-family: sans-serif;
-  max-width: 919px;
+  max-width: 375px;
   margin: 0 auto;
 }
 

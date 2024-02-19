@@ -1,3 +1,7 @@
+*{
+  max-height: 875px;
+}
+
 *,
 ::before,
 ::after {
