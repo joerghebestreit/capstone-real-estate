@@ -20,6 +20,7 @@ export default function EstatePage() {
       .then((res) => res.json())
       .then((apiData) => {
         setProperties((property) => {
+          console.log(apiData)
           return [...property, ...apiData];
         });
       });
