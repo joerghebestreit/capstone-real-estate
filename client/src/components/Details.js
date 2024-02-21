@@ -19,7 +19,7 @@ export default function Details() {
   }, [ID]);
 
   return property ? (
-    <div>
+    <div className="detailPageDiv">
       <Carousel images={property.Img} />
       <div className="detailDiv">
         <div className="p-1">
