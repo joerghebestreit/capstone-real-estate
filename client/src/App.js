@@ -57,7 +57,7 @@ function App() {
             <Update />
           </Route>
           <Route path="/">
-            <HomePage to="/home" />
+            <HomePage />
           </Route>
         </Switch>
       </main>
