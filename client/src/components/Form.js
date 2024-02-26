@@ -4,31 +4,31 @@ import { useState, useEffect } from "react"
 export default function Form() {
     
     
-    const [valueName, setValueName] = useState(
+    const [valuename, setvaluename] = useState(
         localStorage.getItem("Name") || ""
         );
         useEffect (() => {  
-            localStorage.setItem("Name", valueName)
-        }, [valueName])
-    const onChangeName = event => setValueName(event.target.value)
+            localStorage.setItem("Name", valuename)
+        }, [valuename])
+    const onChangeName = event => setvaluename(event.target.value)
         
         
-    const [valueMail, setValueMail] = useState(
+    const [valuemail, setvaluemail] = useState(
         localStorage.getItem("Mail") || ""
         );
         useEffect (() => {
-            localStorage.setItem("Mail", valueMail)
-        }, [valueMail])
-    const onChangeMail = event => setValueMail(event.target.value)
+            localStorage.setItem("Mail", valuemail)
+        }, [valuemail])
+    const onChangeMail = event => setvaluemail(event.target.value)
             
             
-    const [valueMessage, setValueMessage] = useState(
+    const [valuemessage, setvaluemessage] = useState(
         localStorage.getItem("Message") || ""
         );
         useEffect (() => {
-            localStorage.setItem("Message", valueMessage)
-        }, [valueMessage])
-    const onChangeMessage = event => setValueMessage(event.target.value)
+            localStorage.setItem("Message", valuemessage)
+        }, [valuemessage])
+    const onChangeMessage = event => setvaluemessage(event.target.value)
 
 
     // function onSubmit(event) {
@@ -41,11 +41,11 @@ export default function Form() {
         <div className="form">
             <form>
                 <label>Name</label>
-                <input valueName={valueName} onChange={onChangeName} type="text" className="nameInput"></input>
+                <input valuename={valuename} onChange={onChangeName} type="text" className="nameInput"></input>
                 <label>Mail</label>
-                <input valueMail={valueMail} onChange={onChangeMail} type="text" className="mailInput"></input>
+                <input valuemail={valuemail} onChange={onChangeMail} type="text" className="mailInput"></input>
                 <label>Message</label>
-                <textarea valueMessage={valueMessage} onChange={onChangeMessage} type="text" className="textInput"></textarea>
+                <textarea valuemessage={valuemessage} onChange={onChangeMessage} type="text" className="textInput"></textarea>
                 <div>
                     <button type="reset" className="btn">SUBMIT</button>
                 </div>

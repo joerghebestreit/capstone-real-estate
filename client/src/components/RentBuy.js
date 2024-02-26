@@ -7,11 +7,12 @@ export default function RentBuy({onRentBuyChange}) {
 
   useEffect(() => {
     onRentBuyChange(selected)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selected]);
 
-  const handleToggle = (propertyOption) => {
+  let handleToggle = (propertyOption) => {
     setSelected(propertyOption)
-  };
+  }
 
   return (
     <div className="rentBuyDiv">

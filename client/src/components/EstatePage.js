@@ -20,7 +20,6 @@ export default function EstatePage() {
       .then((res) => res.json())
       .then((apiData) => {
         setProperties((property) => {
-          console.log(apiData)
           return [...property, ...apiData];
         });
       });
@@ -82,7 +81,7 @@ export default function EstatePage() {
       })
       .map((property) => {
         return (
-          <Link className="linkBox" to={`/Details/${property.ID}`}>
+          <Link key={property.ID} className="linkBox" to={`/Details/${property.ID}`}>
             <div className="propertyCard">
               <img className="img" alt="" src={property.Img[0]} />
               <div className="shortData">

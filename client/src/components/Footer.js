@@ -6,7 +6,7 @@ function Footer() {
   return (
     <div className="footer">
       <div>
-        <a href="https://www.facebook.com/" class="external" rel="noreferrer" target="_blank">
+        <a href="https://www.facebook.com/" className="external" rel="noreferrer" target="_blank">
           <AiFillFacebook className="fbIcon"/>
         </a>
         <a target="_blank" rel="noreferrer" href="https://www.instagram.com/">

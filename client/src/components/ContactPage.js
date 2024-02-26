@@ -3,6 +3,7 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import Form from "./Form";
 import Map from "./Map";
+import 'mapbox-gl/dist/mapbox-gl.css';
 
 function ContactPage(setViewport) {
   return (

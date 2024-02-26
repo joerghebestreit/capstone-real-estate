@@ -2,6 +2,7 @@ import ReactMapGL, {Marker} from "react-map-gl"
 import {useState} from "react"
 import {FaMapMarkerAlt} from "react-icons/fa"
 import "./ContactPage.css"
+import 'mapbox-gl/dist/mapbox-gl.css';
 
 export default function Map() {
     const [viewport, setViewport] = useState({
