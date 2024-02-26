@@ -14,10 +14,10 @@
   opacity: 80%;
   padding: 15px;
 /*   animation: showPage 1000ms;
- */  height: 100%;
+   height: 100%;*/
   align-self: flex-end;
   color: black;
-  max-width: 682px;
+  /* max-width: 682px; */
   margin: 0 auto;
   margin-top: 37%;
 }
