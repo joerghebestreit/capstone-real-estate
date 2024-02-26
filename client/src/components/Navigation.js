@@ -3,7 +3,6 @@ import "./Navigation.css";
 import { useState } from "react";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
-import Button from "@material-ui/core/Button";
 
 export default function Navigation() {
   const [openMenu, setOpenMenu] = useState(null);
