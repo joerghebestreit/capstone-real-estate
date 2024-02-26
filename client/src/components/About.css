@@ -13,8 +13,8 @@
   background-color: #94d3f0;
   opacity: 80%;
   padding: 15px;
-  animation: showPage 1000ms;
-  height: 100%;
+/*   animation: showPage 1000ms;
+ */  height: 100%;
   align-self: flex-end;
   color: black;
   max-width: 682px;
@@ -22,7 +22,7 @@
   margin-top: 37%;
 }
 
-@keyframes showPage {
+/* @keyframes showPage {
   0% {
     transform: translateY(300px);
   }
@@ -30,3 +30,4 @@
     transform: translateY(0px);
   }
 }
+ */
