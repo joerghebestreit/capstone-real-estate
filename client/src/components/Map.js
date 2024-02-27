@@ -3,6 +3,7 @@ import {useState} from "react"
 import {FaMapMarkerAlt} from "react-icons/fa"
 import "./ContactPage.css"
 import 'mapbox-gl/dist/mapbox-gl.css';
+/* eslint-disable import/no-webpack-loader-syntax */
 import mapboxgl from 'mapbox-gl';
 
 export default function Map() {
