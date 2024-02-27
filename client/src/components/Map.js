@@ -3,12 +3,12 @@ import {useState} from "react"
 import {FaMapMarkerAlt} from "react-icons/fa"
 import "./ContactPage.css"
 import 'mapbox-gl/dist/mapbox-gl.css';
-import mapboxgl from '!mapbox-gl';
+/* eslint-disable import/no-webpack-loader-syntax */
+import mapboxgl from 'mapbox-gl';
+// @ts-ignore
+mapboxgl.workerClass = require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker').default;
 
 export default function Map() {
-    // @ts-ignore
-    mapboxgl.workerClass = require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker').default;
-
     const [viewport, setViewport] = useState({
       latitude: 52.526846,
       longitude: 13.338450,
