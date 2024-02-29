@@ -8,8 +8,6 @@ import mapboxgl from 'mapbox-gl';
 // @ts-ignore
 mapboxgl.workerClass = require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker').default;
 
-//workerclass change
-
 export default function Map() {
     const [viewport, setViewport] = useState({
       latitude: 52.526846,

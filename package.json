@@ -24,6 +24,7 @@
     "mongodb": "^6.3.0",
     "mongoose": "^5.13.22",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-map-gl": "^7.1.7"
   }
 }

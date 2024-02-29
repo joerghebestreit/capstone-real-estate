@@ -2,7 +2,7 @@ import "../components/ContactPage.css";
 import { FaPhoneAlt } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import Form from "./Form";
-import Map from "./Map";
+//import Map from "./Map";
 import 'mapbox-gl/dist/mapbox-gl.css';
 
 function ContactPage(setViewport) {
@@ -28,10 +28,10 @@ function ContactPage(setViewport) {
           <HiOutlineMail className="svgMail" />
           <p className="mailAdress">info@hebestreit-immobilien.com</p>
         </div>
-        <hr className="hrMap"></hr>
+        {/* <hr className="hrMap"></hr>
         <div className="mapDiv">
           <Map setViewport={setViewport} />
-        </div>
+        </div> */}
         <hr className="hrForm"></hr>
         <Form />
       </div>
