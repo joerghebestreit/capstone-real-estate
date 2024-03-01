@@ -6,8 +6,6 @@ const app = express();
 const Apartments = require("./apartment");
 const cors = require('cors');
 
-// BE on render
-
 app.use(express.json());
 app.use(cors());
 app.use((req, res, next) => {
