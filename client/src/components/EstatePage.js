@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import Filter from "../components/Filter";
 import RentBuy from "../components/RentBuy";
 
-// BE on render
+// MongoDB Compass conected
 
 export default function EstatePage() {
   const [properties, setProperties] = useState([]);
